@@ -4,6 +4,6 @@ import Hexagnonal.DiceGame.domain.model.Player;
 
 public interface UsesPlayer {
     Player createPlayer(Player player);
-    void deletePlayer(int playerId);
+    Boolean deletePlayer(int playerId);
 
 }
