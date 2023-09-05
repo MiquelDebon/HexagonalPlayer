@@ -1,38 +1,43 @@
 package Hexagnonal.DiceGame.application.usecases;
 
 import Hexagnonal.DiceGame.domain.model.Player;
+import Hexagnonal.DiceGame.domain.ports.in.UsesPlayer;
 import Hexagnonal.DiceGame.domain.ports.out.PlayerRepositoryPort;
 
 import java.util.List;
 import java.util.Optional;
 
-public class UseCasesImpl implements PlayerRepositoryPort {
+public class UseCasesImpl implements UsesPlayer {
 
-    private final PlayerRepositoryPort playerRepository;
+    private final PlayerRepositoryPort playerRepositoryPort;
 
     public UseCasesImpl(PlayerRepositoryPort playerRepository) {
-        this.playerRepository = playerRepository;
+        this.playerRepositoryPort = playerRepository;
     }
 
 
     @Override
-    public List<Player> findAll() {
-        return playerRepository.findAll();
+    public Player createPlayer(Player player) {
+        return playerRepositoryPort.save(player);
     }
+
     @Override
-    public Optional<Player> findById(Integer id) {
-        return playerRepository.findById(id);
+    public Boolean deletePlayer(int playerId) {
+        return playerRepositoryPort.deleteById(playerId);
     }
+
     @Override
-    public Player save(Player player) {
-        return playerRepository.save(player);
+    public Optional<Player> findPlayerById(int playerId) {
+        return playerRepositoryPort.findById(playerId);
     }
+
     @Override
-    public Optional<Player> update(Player player) {
-        return playerRepository.update(player);
+    public List<Player> findAllPlayers() {
+        return playerRepositoryPort.findAll();
     }
+
     @Override
-    public Boolean deleteById(Integer id) {
-        return playerRepository.deleteById(id);
+    public Optional<Player> updatePlayer(int playerId, Player updatedPlayer) {
+        return playerRepositoryPort.update(playerId, updatedPlayer);
     }
 }

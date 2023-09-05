@@ -9,6 +9,6 @@ public interface PlayerRepositoryPort {
     List<Player> findAll();
     Optional<Player> findById(Integer id);
     Player save(Player player);
-    Optional<Player>  update(Player player);
+    Optional<Player>  update(int id, Player player);
     Boolean deleteById(Integer id);
 }
