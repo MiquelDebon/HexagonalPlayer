@@ -1,8 +1,8 @@
-package Hexagnonal.DiceGame.infraestructure.repository;
+package Hexagnonal.DiceGame.infrastructure.repository;
 
 import Hexagnonal.DiceGame.domain.model.Player;
 import Hexagnonal.DiceGame.domain.ports.out.PlayerRepositoryPort;
-import Hexagnonal.DiceGame.infraestructure.entities.PlayerEntity;
+import Hexagnonal.DiceGame.infrastructure.entities.PlayerEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

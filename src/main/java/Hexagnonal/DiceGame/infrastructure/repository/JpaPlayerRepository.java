@@ -1,6 +1,6 @@
-package Hexagnonal.DiceGame.infraestructure.repository;
+package Hexagnonal.DiceGame.infrastructure.repository;
 
-import Hexagnonal.DiceGame.infraestructure.entities.PlayerEntity;
+import Hexagnonal.DiceGame.infrastructure.entities.PlayerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

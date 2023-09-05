@@ -1,4 +1,4 @@
-package Hexagnonal.DiceGame.infraestructure.entities;
+package Hexagnonal.DiceGame.infrastructure.entities;
 
 import Hexagnonal.DiceGame.domain.model.Player;
 import jakarta.persistence.Entity;

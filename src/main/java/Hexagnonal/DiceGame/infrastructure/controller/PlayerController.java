@@ -1,4 +1,4 @@
-package Hexagnonal.DiceGame.infraestructure.controller;
+package Hexagnonal.DiceGame.infrastructure.controller;
 
 import Hexagnonal.DiceGame.application.services.PlayerServices;
 import Hexagnonal.DiceGame.domain.model.Player;
@@ -55,6 +55,7 @@ public class PlayerController {
         }
         return ResponseEntity.notFound().build();
     }
+
 
 
 }
