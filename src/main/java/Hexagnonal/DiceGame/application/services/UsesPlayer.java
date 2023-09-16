@@ -1,4 +1,4 @@
-package Hexagnonal.DiceGame.domain.ports.in;
+package Hexagnonal.DiceGame.application.services;
 
 import Hexagnonal.DiceGame.domain.model.Player;
 

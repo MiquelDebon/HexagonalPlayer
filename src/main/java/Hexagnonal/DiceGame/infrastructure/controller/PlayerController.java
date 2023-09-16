@@ -1,6 +1,6 @@
 package Hexagnonal.DiceGame.infrastructure.controller;
 
-import Hexagnonal.DiceGame.application.services.PlayerServices;
+import Hexagnonal.DiceGame.application.services.UsesPlayer;
 import Hexagnonal.DiceGame.domain.model.Player;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,9 +10,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/player")
 public class PlayerController {
-    private final PlayerServices playerServices;
+    private final UsesPlayer playerServices;
 
-    public PlayerController(PlayerServices playerServices) {
+    public PlayerController(UsesPlayer playerServices) {
         this.playerServices = playerServices;
     }
 

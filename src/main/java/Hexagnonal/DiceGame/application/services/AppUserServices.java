@@ -1,17 +1,16 @@
-package Hexagnonal.DiceGame.application.usecases;
+package Hexagnonal.DiceGame.application.services;
 
 import Hexagnonal.DiceGame.domain.model.Player;
-import Hexagnonal.DiceGame.domain.ports.in.UsesPlayer;
-import Hexagnonal.DiceGame.domain.ports.out.PlayerRepositoryPort;
+import Hexagnonal.DiceGame.domain.ports.PlayerRepositoryPort;
 
 import java.util.List;
 import java.util.Optional;
 
-public class UseCasesImpl implements UsesPlayer {
+public class AppUserServices implements UsesPlayer {
 
     private final PlayerRepositoryPort playerRepositoryPort;
 
-    public UseCasesImpl(PlayerRepositoryPort playerRepository) {
+    public AppUserServices(PlayerRepositoryPort playerRepository) {
         this.playerRepositoryPort = playerRepository;
     }
 
